@@ -79,24 +79,6 @@ Status      : 🟢 Open to Opportunities
 
 ---
 
-## `$ git log --stat`
-
-<div align="center">
-
-<!-- GitHub Stats Cards -->
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=zunairmalik&show_icons=true&theme=chartreuse-dark&bg_color=0b1520&border_color=1a3a5c&title_color=00ff87&icon_color=00cfff&text_color=cce8ff&hide_border=false&count_private=true" />
-&nbsp;&nbsp;
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zunairmalik&layout=compact&theme=chartreuse-dark&bg_color=0b1520&border_color=1a3a5c&title_color=00ff87&text_color=cce8ff&hide_border=false&langs_count=6" />
-
-<br/><br/>
-
-<!-- Streak Stats -->
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=zunairmalik&theme=chartreuse-dark&background=0b1520&border=1a3a5c&stroke=00ff87&ring=00cfff&fire=ff8c42&currStreakNum=ffffff&sideNums=cce8ff&currStreakLabel=00ff87&sideLabels=00cfff&dates=4a7a9b" />
-
-</div>
-
----
-
 ## `$ cat about.md`
 
 I'm a **DevOps Engineer** with a Computer Science background, passionate about building
@@ -110,17 +92,6 @@ Currently deepening expertise in:
 - 🏗️ **Infrastructure as Code** with Terraform and Ansible
 - 📊 **Observability stacks** — Prometheus + Grafana + alerting pipelines
 - 🔐 **DevSecOps** practices and secrets management
-
----
-
-## `$ cat activity.svg`
-
-<div align="center">
-
-<!-- Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=zunairmalik&bg_color=0b1520&color=00cfff&line=00ff87&point=ff8c42&area=true&area_color=00ff8720&hide_border=false&border_color=1a3a5c&title_color=00ff87" width="95%"/>
-
-</div>
 
 ---
 
