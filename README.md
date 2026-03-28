@@ -1,602 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Zunair Malik — DevOps Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg:        #050a0e;
-    --surface:   #0b1520;
-    --panel:     #0f1e2e;
-    --border:    #1a3a5c;
-    --green:     #00ff87;
-    --cyan:      #00cfff;
-    --orange:    #ff8c42;
-    --text:      #cce8ff;
-    --muted:     #4a7a9b;
-    --glow-g:    0 0 20px #00ff8755, 0 0 40px #00ff8722;
-    --glow-c:    0 0 20px #00cfff55, 0 0 40px #00cfff22;
-  }
+<div align="center">
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!-- Animated Header Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1520,50:0d2d4a,100:00ff87&height=200&section=header&text=Muhammad%20Zunair%20Malik&fontSize=40&fontColor=ffffff&fontAlignY=38&desc=DevOps%20Engineer%20%7C%20Cloud%20Architect%20%7C%20Automation%20Enthusiast&descAlignY=58&descSize=16&descColor=00cfff&animation=fadeIn" width="100%"/>
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+<!-- Typing SVG -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=00FF87&center=true&vCenter=true&width=600&lines=DevOps+Engineer+%F0%9F%9A%80;Cloud+Architect+%E2%98%81%EF%B8%8F+%7C+AWS+Focused;CI%2FCD+Pipeline+Builder+%F0%9F%94%84;Infrastructure+as+Code+%F0%9F%8F%97%EF%B8%8F;Kubernetes+Operator+%E2%98%B8%EF%B8%8F" alt="Typing SVG" />
+</a>
 
-  /* ── GRID BACKGROUND ── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image:
-      linear-gradient(rgba(0,207,255,.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,207,255,.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-    z-index: 0;
-  }
+<br/>
 
-  /* ── SCANLINE OVERLAY ── */
-  body::after {
-    content: '';
-    position: fixed; inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0,0,0,.08) 2px,
-      rgba(0,0,0,.08) 4px
-    );
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .container {
-    position: relative;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
-    z-index: 1;
-  }
-
-  /* ── TOP BAR ── */
-  .top-bar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    color: var(--muted);
-    margin-bottom: 48px;
-    letter-spacing: .08em;
-    animation: fadeDown .6s ease both;
-  }
-  .top-bar .dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--green);
-    box-shadow: var(--glow-g);
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  /* ── HERO ── */
-  .hero {
-    margin-bottom: 52px;
-    animation: fadeUp .8s .2s ease both;
-  }
-  .hero-label {
-    font-size: 11px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--cyan);
-    margin-bottom: 16px;
-    opacity: .7;
-  }
-  .hero-name {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(38px, 8vw, 72px);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -.02em;
-    color: #fff;
-  }
-  .hero-name .accent { color: var(--green); }
-  .hero-title {
-    font-size: clamp(13px, 2.5vw, 17px);
-    color: var(--cyan);
-    margin-top: 12px;
-    letter-spacing: .06em;
-  }
-  .hero-title .cursor {
-    display: inline-block;
-    width: 10px; height: 1.2em;
-    background: var(--cyan);
-    vertical-align: text-bottom;
-    margin-left: 3px;
-    animation: blink 1s step-end infinite;
-  }
-
-  /* ── STAT ROW ── */
-  .stats-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 48px;
-    animation: fadeUp .8s .4s ease both;
-  }
-  .stat-card {
-    flex: 1 1 140px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 20px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color .3s, transform .3s;
-  }
-  .stat-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0,255,135,.05) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity .3s;
-  }
-  .stat-card:hover { border-color: var(--green); transform: translateY(-3px); }
-  .stat-card:hover::before { opacity: 1; }
-  .stat-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--green);
-    text-shadow: var(--glow-g);
-    line-height: 1;
-  }
-  .stat-label {
-    font-size: 10px;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-top: 6px;
-  }
-
-  /* ── SECTION HEADER ── */
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  .section-header h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--cyan);
-  }
-  .section-header::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--border), transparent);
-  }
-
-  /* ── TECH GRID ── */
-  .tech-section { margin-bottom: 48px; animation: fadeUp .8s .5s ease both; }
-  .tech-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .tech-chip {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 7px 13px;
-    font-size: 12px;
-    letter-spacing: .04em;
-    cursor: default;
-    transition: all .25s;
-    position: relative;
-    overflow: hidden;
-  }
-  .tech-chip::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--green);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .3s;
-  }
-  .tech-chip:hover {
-    border-color: var(--green);
-    color: var(--green);
-    box-shadow: var(--glow-g);
-    transform: translateY(-2px);
-  }
-  .tech-chip:hover::after { transform: scaleX(1); }
-  .tech-chip .icon { font-size: 15px; }
-
-  /* ── PIPELINE / TIMELINE ── */
-  .pipeline-section { margin-bottom: 48px; animation: fadeUp .8s .6s ease both; }
-  .pipeline {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px 24px;
-    overflow: hidden;
-    position: relative;
-  }
-  .pipeline::before {
-    content: '$ cat /etc/devops/pipeline.yaml';
-    position: absolute;
-    top: 8px; left: 16px;
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: .08em;
-  }
-  .pipeline-steps {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px;
-    margin-top: 18px;
-    width: 100%;
-  }
-  .p-step {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 9px 14px;
-    font-size: 11px;
-    letter-spacing: .05em;
-    transition: border-color .3s;
-    animation: pipeSlide .5s calc(var(--i) * .12s) ease both;
-  }
-  .p-step:hover { border-color: var(--orange); }
-  .p-step .p-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--green);
-    box-shadow: var(--glow-g);
-    animation: pulse 2s calc(var(--i) * .4s) ease-in-out infinite;
-  }
-  .p-arrow {
-    color: var(--muted);
-    font-size: 13px;
-    padding: 0 2px;
-  }
-
-  /* ── ABOUT ── */
-  .about-section { margin-bottom: 48px; animation: fadeUp .8s .7s ease both; }
-  .about-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px;
-    position: relative;
-    overflow: hidden;
-  }
-  .about-box::before {
-    content: '';
-    position: absolute;
-    top: -40px; right: -40px;
-    width: 160px; height: 160px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,255,135,.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .about-box p {
-    font-size: 13px;
-    line-height: 1.9;
-    color: var(--text);
-    opacity: .85;
-  }
-  .about-box .highlight { color: var(--green); font-weight: 600; }
-  .about-box .hl2 { color: var(--cyan); font-weight: 600; }
-
-  /* ── CONTACT / LINKS ── */
-  .links-section { animation: fadeUp .8s .8s ease both; }
-  .links-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .link-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 11px 20px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    letter-spacing: .06em;
-    text-decoration: none;
-    color: var(--text);
-    background: var(--panel);
-    transition: all .3s;
-    cursor: pointer;
-  }
-  .link-btn:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
-    box-shadow: var(--glow-c);
-    transform: translateY(-2px);
-  }
-  .link-btn svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
-
-  /* ── FOOTER ── */
-  .footer {
-    margin-top: 64px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: .1em;
-    animation: fadeUp .8s 1s ease both;
-  }
-
-  /* ── FLOATING PARTICLES ── */
-  .particles {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-  }
-  .particle {
-    position: absolute;
-    width: 2px; height: 2px;
-    border-radius: 50%;
-    background: var(--cyan);
-    opacity: .0;
-    animation: float var(--dur) var(--delay) linear infinite;
-  }
-
-  /* ── KEYFRAMES ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0; }
-  }
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50%       { transform: scale(1.3); opacity: .7; }
-  }
-  @keyframes pipeSlide {
-    from { opacity: 0; transform: translateX(-12px); }
-    to   { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes float {
-    0%   { transform: translateY(100vh) translateX(0); opacity: 0; }
-    10%  { opacity: .5; }
-    90%  { opacity: .5; }
-    100% { transform: translateY(-10vh) translateX(calc(var(--drift) * 1px)); opacity: 0; }
-  }
-
-  @media (max-width: 600px) {
-    .pipeline-steps { gap: 8px; }
-    .p-arrow { display: none; }
-    .footer { flex-direction: column; text-align: center; }
-  }
-</style>
-</head>
-<body>
-
-<!-- Floating particles -->
-<div class="particles" id="particles"></div>
-
-<div class="container">
-
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <span class="dot"></span>
-    <span>SYSTEM ONLINE</span>
-    <span style="margin-left:auto; font-size:10px;">Punjab, Pakistan</span>
-  </div>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-label">// devops_engineer.profile</div>
-    <h1 class="hero-name">
-      Muhammad<br>
-      Zunair <span class="accent">Malik</span>
-    </h1>
-    <div class="hero-title">
-      <span id="typed-title"></span><span class="cursor"></span>
-    </div>
-  </header>
-
-  <!-- STATS -->
-  <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-num" data-target="3">0</div>
-      <div class="stat-label">Years in Tech</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num" data-target="15">0</div>
-      <div class="stat-label">Tools Mastered</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num" data-target="99">0</div>
-      <div class="stat-label">% Uptime Goal</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num" data-target="0">∞</div>
-      <div class="stat-label">Deploy Fears</div>
-    </div>
-  </div>
-
-  <!-- TECH STACK -->
-  <section class="tech-section">
-    <div class="section-header"><h2>Tech Stack</h2></div>
-    <div class="tech-grid">
-      <div class="tech-chip"><span class="icon">🐧</span> Linux</div>
-      <div class="tech-chip"><span class="icon">🐳</span> Docker</div>
-      <div class="tech-chip"><span class="icon">☸️</span> Kubernetes</div>
-      <div class="tech-chip"><span class="icon">☁️</span> AWS</div>
-      <div class="tech-chip"><span class="icon">🏗️</span> Terraform</div>
-      <div class="tech-chip"><span class="icon">🔧</span> Ansible</div>
-      <div class="tech-chip"><span class="icon">🔄</span> Jenkins</div>
-      <div class="tech-chip"><span class="icon">⚙️</span> GitHub Actions</div>
-      <div class="tech-chip"><span class="icon">📊</span> Prometheus</div>
-      <div class="tech-chip"><span class="icon">📈</span> Grafana</div>
-      <div class="tech-chip"><span class="icon">🔐</span> Vault</div>
-      <div class="tech-chip"><span class="icon">📜</span> Bash</div>
-      <div class="tech-chip"><span class="icon">🐍</span> Python</div>
-      <div class="tech-chip"><span class="icon">🌐</span> Nginx</div>
-      <div class="tech-chip"><span class="icon">📦</span> Helm</div>
-    </div>
-  </section>
-
-  <!-- PIPELINE -->
-  <section class="pipeline-section">
-    <div class="section-header"><h2>CI/CD Pipeline</h2></div>
-    <div class="pipeline">
-      <div class="pipeline-steps">
-        <div class="p-step" style="--i:0"><span class="p-dot"></span>Code Push</div>
-        <span class="p-arrow">→</span>
-        <div class="p-step" style="--i:1"><span class="p-dot"></span>Build &amp; Test</div>
-        <span class="p-arrow">→</span>
-        <div class="p-step" style="--i:2"><span class="p-dot"></span>Docker Image</div>
-        <span class="p-arrow">→</span>
-        <div class="p-step" style="--i:3"><span class="p-dot"></span>Scan &amp; Validate</div>
-        <span class="p-arrow">→</span>
-        <div class="p-step" style="--i:4"><span class="p-dot"></span>K8s Deploy</div>
-        <span class="p-arrow">→</span>
-        <div class="p-step" style="--i:5"><span class="p-dot"></span>Monitor</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about-section">
-    <div class="section-header"><h2>About</h2></div>
-    <div class="about-box">
-      <p>
-        I'm a <span class="highlight">DevOps Engineer</span> with a background in Computer Science,
-        passionate about building <span class="hl2">resilient, automated infrastructure</span>
-        that scales effortlessly. From writing zero-downtime deployment pipelines to
-        architecting cloud-native systems on <span class="highlight">AWS</span>,
-        I believe great infrastructure should be invisible — until it saves the day.<br><br>
-        Currently deepening expertise in <span class="hl2">Kubernetes orchestration</span>,
-        <span class="highlight">Infrastructure as Code</span> with Terraform,
-        and building observability stacks that give engineers superpowers.
-        Always shipping. Always learning.
-      </p>
-    </div>
-  </section>
-
-  <!-- LINKS -->
-  <section class="links-section">
-    <div class="section-header"><h2>Connect</h2></div>
-    <div class="links-row">
-      <a class="link-btn" href="https://github.com/zunairmalik" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.334-5.467-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.628-5.48 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        GitHub
-      </a>
-      <a class="link-btn" href="https://linkedin.com/in/zunairmalik" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-      <a class="link-btn" href="mailto:zunairmalik@email.com">
-        <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-        Email
-      </a>
-      <div class="link-btn" style="color:var(--green); border-color:var(--green);">
-        <span style="font-size:8px; letter-spacing:.12em; text-transform:uppercase;">Open to Roles</span>
-        <span class="p-dot" style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;box-shadow:0 0 8px var(--green);animation:pulse 1.5s ease-in-out infinite;"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <span>// MUHAMMAD ZUNAIR MALIK · DEVOPS ENGINEER</span>
-    <span>BUILD WITH PRECISION. DEPLOY WITH CONFIDENCE.</span>
-  </footer>
+<!-- Profile views + followers badges -->
+![Profile Views](https://komarev.com/ghpvc/?username=zunairmalik&color=00ff87&style=flat-square&label=PROFILE+VIEWS)
+&nbsp;
+[![GitHub followers](https://img.shields.io/github/followers/zunairmalik?color=00cfff&style=flat-square&logo=github&label=Followers)](https://github.com/zunairmalik)
 
 </div>
 
-<script>
-  /* ── Floating Particles ── */
-  const pContainer = document.getElementById('particles');
-  for (let i = 0; i < 30; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.cssText = `
-      left: ${Math.random() * 100}%;
-      --dur: ${6 + Math.random() * 12}s;
-      --delay: ${Math.random() * 10}s;
-      --drift: ${(Math.random() - .5) * 200};
-      background: ${Math.random() > .5 ? '#00ff87' : '#00cfff'};
-    `;
-    pContainer.appendChild(p);
-  }
+---
 
-  /* ── Typewriter ── */
-  const titles = [
-    'DevOps Engineer',
-    'Cloud Architect · AWS',
-    'CI/CD Pipeline Builder',
-    'Infrastructure as Code',
-    'Kubernetes Operator',
-  ];
-  let ti = 0, ci = 0, deleting = false;
-  const el = document.getElementById('typed-title');
-  function type() {
-    const current = titles[ti];
-    if (!deleting) {
-      el.textContent = current.slice(0, ++ci);
-      if (ci === current.length) { deleting = true; setTimeout(type, 1800); return; }
-    } else {
-      el.textContent = current.slice(0, --ci);
-      if (ci === 0) { deleting = false; ti = (ti + 1) % titles.length; }
-    }
-    setTimeout(type, deleting ? 40 : 75);
-  }
-  setTimeout(type, 800);
+## `$ whoami`
 
-  /* ── Counter Animation ── */
-  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
-    const target = +el.dataset.target;
-    let current = 0;
-    const step = Math.ceil(target / 40);
-    const timer = setInterval(() => {
-      current = Math.min(current + step, target);
-      el.textContent = current;
-      if (current >= target) clearInterval(timer);
-    }, 40);
-  });
-</script>
-</body>
-</html>
+```yaml
+Name        : Muhammad Zunair Malik
+Role        : DevOps Engineer
+Location    : Punjab, Pakistan 🇵🇰
+Education   : BS Computer Science (2017–2021)
+Focus       : Cloud Infrastructure · CI/CD · Automation · Observability
+Status      : 🟢 Open to Opportunities
+```
+
+> *"Build resilient systems. Automate everything. Ship with confidence."*
+
+---
+
+## `$ cat /etc/devops/stack.yaml`
+
+### ☁️ Cloud & Infrastructure
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)
+
+### 🐳 Containers & Orchestration
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-%230F1689.svg?style=for-the-badge&logo=helm&logoColor=white)
+
+### 🔄 CI/CD & Automation
+![Jenkins](https://img.shields.io/badge/Jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/GitLab%20CI-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+
+### 📊 Monitoring & Observability
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white)
+
+### 🖥️ OS & Scripting
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Bash](https://img.shields.io/badge/Bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+### 🔒 Security & Secrets
+![Vault](https://img.shields.io/badge/Vault-%23000000.svg?style=for-the-badge&logo=vault&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
+
+---
+
+## `$ cat pipeline.log`
+
+```
+╔══════════════════════════════════════════════════════════════════════╗
+║                     CI/CD PIPELINE STATUS                           ║
+╠══════════╦══════════╦══════════╦══════════╦══════════╦══════════════╣
+║ 📝 CODE  ║ 🏗  BUILD ║ 🧪 TEST  ║ 🐳 IMAGE ║ ☸️ DEPLOY ║ 📊 MONITOR  ║
+║  PUSH    ║  & LINT  ║  SUITE   ║   PUSH   ║  K8s     ║  GRAFANA    ║
+╠══════════╩══════════╩══════════╩══════════╩══════════╩══════════════╣
+║  STATUS: ✅ ALL STAGES PASSING  │  UPTIME: 99.9%  │  ENV: PROD     ║
+╚══════════════════════════════════════════════════════════════════════╝
+```
+
+---
+
+## `$ git log --stat`
+
+<div align="center">
+
+<!-- GitHub Stats Cards -->
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=zunairmalik&show_icons=true&theme=chartreuse-dark&bg_color=0b1520&border_color=1a3a5c&title_color=00ff87&icon_color=00cfff&text_color=cce8ff&hide_border=false&count_private=true" />
+&nbsp;&nbsp;
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zunairmalik&layout=compact&theme=chartreuse-dark&bg_color=0b1520&border_color=1a3a5c&title_color=00ff87&text_color=cce8ff&hide_border=false&langs_count=6" />
+
+<br/><br/>
+
+<!-- Streak Stats -->
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=zunairmalik&theme=chartreuse-dark&background=0b1520&border=1a3a5c&stroke=00ff87&ring=00cfff&fire=ff8c42&currStreakNum=ffffff&sideNums=cce8ff&currStreakLabel=00ff87&sideLabels=00cfff&dates=4a7a9b" />
+
+</div>
+
+---
+
+## `$ cat about.md`
+
+I'm a **DevOps Engineer** with a Computer Science background, passionate about building
+**resilient, automated infrastructure** that scales without friction.
+
+From crafting zero-downtime deployment pipelines to architecting cloud-native systems on **AWS**,
+I believe great infrastructure should be invisible — until it saves the day.
+
+Currently deepening expertise in:
+- 🔧 **Kubernetes** orchestration and cluster management
+- 🏗️ **Infrastructure as Code** with Terraform and Ansible
+- 📊 **Observability stacks** — Prometheus + Grafana + alerting pipelines
+- 🔐 **DevSecOps** practices and secrets management
+
+---
+
+## `$ cat activity.svg`
+
+<div align="center">
+
+<!-- Activity Graph -->
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=zunairmalik&bg_color=0b1520&color=00cfff&line=00ff87&point=ff8c42&area=true&area_color=00ff8720&hide_border=false&border_color=1a3a5c&title_color=00ff87" width="95%"/>
+
+</div>
+
+---
+
+## `$ ping connect`
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/zunairmalik)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zunairmalik)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zunairmalik@email.com)
+
+<br/>
+
+![Open to Work](https://img.shields.io/badge/🟢%20OPEN%20TO%20ROLES-DevOps%20%7C%20Cloud%20%7C%20SRE-%2300ff87?style=for-the-badge)
+
+</div>
+
+---
+
+<!-- Footer Wave -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff87,50:0d2d4a,100:0b1520&height=120&section=footer" width="100%"/>
+
+<div align="center">
+  <sub>⚡ Build with precision. Deploy with confidence. Monitor always.</sub>
+</div>
