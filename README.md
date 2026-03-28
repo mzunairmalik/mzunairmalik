@@ -11,9 +11,7 @@
 <br/>
 
 <!-- Profile views + followers badges -->
-![Profile Views](https://komarev.com/ghpvc/?username=zunairmalik&color=00ff87&style=flat-square&label=PROFILE+VIEWS)
-&nbsp;
-[![GitHub followers](https://img.shields.io/github/followers/zunairmalik?color=00cfff&style=flat-square&logo=github&label=Followers)](https://github.com/zunairmalik)
+
 
 </div>
 
